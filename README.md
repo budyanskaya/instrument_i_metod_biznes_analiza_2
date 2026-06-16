@@ -8,4 +8,10 @@
 
 <img width="1233" height="530" alt="image" src="https://github.com/user-attachments/assets/903809a1-a46a-4ad5-a1fc-a148df78c995" />
 
+<img width="751" height="857" alt="image" src="https://github.com/user-attachments/assets/3f3b59d0-fd61-4db9-b379-71b8f7577b26" />
+
+<img width="1417" height="868" alt="image" src="https://github.com/user-attachments/assets/24f95541-36cd-42ee-b74a-dd141e7b6bf9" />
+
+<img width="1002" height="401" alt="image" src="https://github.com/user-attachments/assets/18202e18-438d-49d1-99b2-38986f891997" />
+
 Схема начинается с ноды «Форма отзыва клиента» — точки сбора оценки. Далее идёт переключатель «Switch» в режиме «Rules», который делит поток по оценке. При низкой оценке (≤6) система вызывает внешний сервис через https://httpbin.org/post, затем создаёт тикет в CRM через ноду «Создать тикет в CRM» и отправляет уведомление службе качества через sendMessage. При высокой оценке (≥9) срабатывает нода «Сообщение клиенту (Яндекс.Маркет)» через sendMessage, которая автоматически отправляет клиенту письмо с просьбой оставить публичный отзыв. Все ноды связаны последовательно, ветвление реализовано через rules-переключатель.
